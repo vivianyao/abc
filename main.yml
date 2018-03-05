@@ -35,3 +35,9 @@
   get_url:
     url:  http://javadl.oracle.com/webapps/download/AutoDL?BundleId=218822_e9e7ea248e2c4826b92b3f075a80e441
     dest: /home/Downloads/jre-8u121-linux-x64.rpm
+    dest: /home/Downloads/jre-8u121-linux-x64.rpm
+    dest: /home/Downloads/jre-8u121-linux-x64.rpm
+    dest: /home/Downloads/jre-8u121-linux-x64.rpm
+    dest: /home/Downloads/jre-8u121-linux-x64.rpm
+    dest: /home/Downloads/jre-8u121-linux-x64.rpm
+    dest: /home/Downloads/jre-8u121-linux-x64.rpm
