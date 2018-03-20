@@ -1,0 +1,46 @@
+# from github installing to a relative path
+
+- src: https://github.com/bennojoy/nginx
+  path: vagrant/roles/
+
+
+
+
+
+
+# - name : clone ehanced backup script using mysqldump
+#   sudo : false
+#   local_action : git repo="{{ mysqlbackup_mysqldump_secure_repo }}" dest="/tmp/ansible-mysqldump-script/" recursive=False
+
+
+
+ mysqldump --databases sda > sda.sql.gz
+ mysqldump --databases cde > cde.sql.gz
+ mysqldump --databases trl > trl.sql.gz
+ mysqldump --databases hdd > hdd.sql.gz
+ mysqldump --databases pub > pub.sql.gz
+
+
+mysqldump
+--user={{ old_servers[outer_item.old_server].old_user }}
+--password={{ old_servers[outer_item.old_server].old_password }}
+--host=127.0.0.1
+--port={{ dbmigtunnel_port }}
+{{ outer_item.old_db }}
+--quick
+--set-gtid-purged=OFF
+-C
+> mysqltmp/{{ outer_item.new_db }}.sql"
+
+my.cnf
+
+[mysqld]
+
+[client]
+
+
+
+[mysqldump]
+quick
+set-gtid-purged=OFF
+compress
